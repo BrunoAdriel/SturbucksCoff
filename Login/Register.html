@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <title>Registrarse</title>
+</head>
+<body>
+    <a href="../index.html">Volver al menu</a>
+    <h1>Registrarse</h1>
+    <!--Inicio del layout-->
+    <div class="card" style="width: 34rem;">
+        <div class="card-header">
+            Registrarse
+        </div>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="Name">Nombre</label>
+                <input type="text" class="form-control" id="Name">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="Surname">Apellido</label>
+                <input type="text" class="form-control" id="Surname">
+            </div>
+            <div class="col-md-6">
+                <label  class="form-label" for="Pass1">Contraseña</label>
+                <input type="password" class="form-control" id="Pass1">
+            </div>
+            <div class="col-md-6">
+                <label  class="form-label" for="Pass2">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="Pass2">
+            </div>
+            <div class="col-12">
+                <label class="form-label" for="Email">Email</label>
+                <input type="email" class="form-control" id="Email">
+            </div>
+            <div class="col-md-5">
+                <label class="form-label" for="Birthday">Fecha de nacimiento</label>
+                <input type="date" id="Birthday">
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                Recordarme
+                </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Registrarme</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="LogicLogin.js"></script>
+</body>
+</html>l
