@@ -43,6 +43,7 @@ function agregarACarrito(p){
         <td>${p.foto}</td>
         <td>${p.nombre}</td>
         <td>${p.precio}</td>
+        <td><button class="btn btn-primary eliminar">Eliminar</button></td>
     </tr>
     `;
 
@@ -51,10 +52,15 @@ function agregarACarrito(p){
     totalAPAGAR.innerHTML =  `Total a pagar total $ ${total}` ;
     localStorage.setItem('carro', JSON.stringify(carro));
 
+//Eliminar prod de carrito
 
-    
-    // let productoJSON = localStorage.getItem("carro");
-    // console.table(productoJSON);
+    let eliminar = document.getElementsByClassName('eliminar');
+    for (const btn of eliminar) {
+        btn.addEventListener('click',(element)=>{
+            element.target.parentNode.parentNode.remove();
+        })
+    }
+
 
 }
 
@@ -66,13 +72,29 @@ function mostrar() {
                 <td>${e.foto}</td>
                 <td>${e.nombre}</td>
                 <td>${e.precio}</td>
+                <td><button class="btn btn-primary eliminar">Eliminar</button></td>
             </tr>
             `;
         });
     }
+
+    //Eliminar prod de carrito \copie el codigo de arriba 
+
+    let eliminar = document.getElementsByClassName('eliminar');
+    for (const btn of eliminar) {
+        btn.addEventListener('click',(element)=>{
+            element.target.parentNode.parentNode.remove();
+        })
+    }
+
+
 };
 
 
+
+
+
+//////////
 
     // carritoGuardado.forEach(element => {
     //     tablaCarro.innerHTML += `
