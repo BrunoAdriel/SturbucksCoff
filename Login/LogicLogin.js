@@ -1,15 +1,21 @@
-//Pagina de Registro 
-
-// let nombre = document.getElementById("Name");
-// let apellido = document.getElementById("Surname")
-// let contraseña1 = document.getElementById("Pass1");
-// let contraseña2 = document.getElementById("Pass2");
-// let email = document.getElementById("Email");
-// let registro = document.getElementById("registrarse")
-// let nuevosUsuarios = [];
+//vinculacion del formulario con JS
+const loginForm = document.getElementById('loginForm')
 
 //Funciones
+loginForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const contrasenia = document.getElementById('contrasenia').value;
+    const usuarios = JSON.parse(localStorage.getItem('usuariosNuevos')) || [] ;
+    const userValido = usuarios.find(e => e.email === email && e.contrasenia === contrasenia );
+    if(!userValido){
+        return alert('Contraseña o Email incorrectos!')
+    }else{
+        alert(`Bienvenido ${userValido.nombre}, te llevaremos al inicio`);
+        window.location.href ='../index.html';
+    }
 
+})
 
 
 

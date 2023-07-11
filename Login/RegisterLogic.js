@@ -12,10 +12,13 @@ registerForm.addEventListener('submit',(e)=>{
     const usuarioRegistrado = usuarios.find (e => e.email === email );
     if(usuarioRegistrado){
         return alert('Este email ya esta registrado');
+    }else{
+        alert('Registro Exitoso!! Te llevaremos a la pagina de Ingreso.');
+        window.location.href = 'Login.html'
     }
 
 
     usuarios.push({nombre: nombre, apellido: apellido, email: email, contrasenia: contrasenia})
     localStorage.setItem('usuariosNuevos', JSON.stringify(usuarios))
-    alert('Registro Exitoso!!');
+
 })
